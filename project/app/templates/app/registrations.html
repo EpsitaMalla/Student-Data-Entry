@@ -1,0 +1,28 @@
+{% extends 'app/base.html' %}
+
+{% block title %}Admission Registrations{% endblock %}
+
+{% block content %}
+<h1>Admission Requests</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Submitted At</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for admission in admissions %}
+        <tr>
+            <td>{{ admission.name }}</td>
+            <td>{{ admission.email }}</td>
+            <td>{{ admission.message }}</td>
+            <td>{{ admission.submitted_at }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'home' %}" class="btn">Back to Home</a>
+{% endblock %}

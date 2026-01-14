@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+
+{% block title %}Django Admission Form{% endblock %}
+
+{% block content %}
+<h1>Django Admission Request</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn">Submit Request</button>
+</form>
+<a href="{% url 'home' %}">Back to Home</a>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Django Admission System</h1>
+<p>Welcome! Submit your admission request, view registrations, or manage your account.</p>
+<div class="home-buttons">
+    <a href="{% url 'form' %}" class="btn">Submit Admission Request</a>
+    <a href="{% url 'registrations' %}" class="btn">View Registrations</a>
+    <a href="{% url 'signup' %}" class="btn">Sign Up</a>
+    <a href="{% url 'login' %}" class="btn">Log In</a>
+</div>
+{% endblock %}
