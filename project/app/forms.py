@@ -6,6 +6,7 @@ from .models import Student, Admission
 class StudentRegistrationForm(UserCreationForm):
     full_name = forms.CharField(max_length=100, required=True, label="Full Name")
     email = forms.EmailField(required=True)
+     
 
     class Meta:
         model = User
@@ -20,4 +21,4 @@ class StudentRegistrationForm(UserCreationForm):
 class AdmissionForm(forms.ModelForm):
     class Meta:
         model = Admission
-        fields = ['name', 'email', 'message']
+        fields = ['name', 'email', 'age', 'message']
